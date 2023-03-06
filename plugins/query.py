@@ -520,7 +520,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == 'sᴇʀɪᴇs':
         await query.answer("⚠️ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ⚠️\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛ sᴇʀɪᴇs ꜰɪʟᴇ,\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀsᴛᴇ ʜᴇʀᴇ\nاذا لم تجد الفيلم,\nاذهب الي جوجل ⇦ اكتب الاسم ⇦ انسخ الاسم الصحيح ⇦ الصقه هنا", True)
     elif query.data == 'ɪɴꜰᴏ':
-        await query.answer("sᴇʀɪᴇs ʀᴇǫᴜᴇsᴛ ꜰᴏʀᴍᴀᴛ\n              ▔▔▔▔▔▔▔▔▔\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ sᴇʀɪᴇs ꜰᴏʟʟᴏᴡ ᴛʜᴇ ꜰᴏʀᴍᴀᴛ\n(للبحث عن مـسلسل اِتبع التنسـيق الآتـي)\nGame of Thrones\nSupernatural S11\nWednesday S01 1080p\n\n🚫➠ ᴅᴏɴᴛ ᴜsᴇ  ':_(,./)&-", True)
+        await query.answer("sᴇʀɪᴇs ʀᴇǫᴜᴇsᴛ ꜰᴏʀᴍᴀᴛ\n              ▔▔▔▔▔▔▔▔▔\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ sᴇʀɪᴇs ꜰᴏʟʟᴏᴡ ᴛʜᴇ ꜰᴏʀᴍᴀᴛ\n(للبحث عن مـسلسل اِتبع التنسـيق الآتـي)\nGame of Thrones\nSupernatural S11\nWednesday S01 1080p\n\n🚫➠ ᴅᴏɴᴛ ᴜsᴇ ':_(,./)&-", True)
     elif query.data == "start":                        
         buttons = [[
             InlineKeyboardButton('💯 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 & كيفية الاستخدام 💯', callback_data='how')
