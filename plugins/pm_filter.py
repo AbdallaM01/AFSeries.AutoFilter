@@ -60,8 +60,8 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{file.file_id}')] for file in files ]    
     btn.insert(0,
         [
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'ɪɴꜰᴏ'),
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ᴍᴏᴠɪᴇs')
+                InlineKeyboardButton(f'sᴇʀɪᴇs', 'ɪɴꜰᴏ'),
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'sᴇʀɪᴇs')
         ]
     )
     btn.insert(11,
