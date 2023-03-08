@@ -518,7 +518,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=True)
     elif query.data == 'sᴇʀɪᴇs':
-        await query.answer("⚠️ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ⚠️\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛ sᴇʀɪᴇs ꜰɪʟᴇ,\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ sᴇʀɪᴇs ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀsᴛᴇ ʜᴇʀᴇ\nاذا لم تجد المسلسل,\nاذهب الي جوجل ⇦ اكتب الاسم ⇦ انسخ الاسم الصحيح ⇦ الصقه هنا", True)
+        await query.answer("⚠️ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ⚠️\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛ sᴇʀɪᴇs ꜰɪʟᴇ,\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ sᴇʀɪᴇs ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀsᴛᴇ ʜᴇʀᴇ\nاذا لم تجد المسلسل\nاذهب الي جوجل ⇦ اكتب الاسم ⇦ انسخ الاسم الصحيح ⇦ الصقه هنا", True)
     elif query.data == 'ɪɴꜰᴏ':
         await query.answer("sᴇʀɪᴇs ʀᴇǫᴜᴇsᴛ ꜰᴏʀᴍᴀᴛ\n              ▔▔▔▔▔▔▔▔▔\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ sᴇʀɪᴇs ꜰᴏʟʟᴏᴡ ᴛʜᴇ ꜰᴏʀᴍᴀᴛ\n(للبحث عن مـسلسل اِتبع التنسيق الآتي)\nGame of Thrones\nSupernatural S11\nWednesday S01 1080p\n\n🚫➠ ᴅᴏɴᴛ ᴜsᴇ ':_(,./)&-", True)
     elif query.data == "start":                        
