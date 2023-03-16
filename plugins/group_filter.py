@@ -261,7 +261,7 @@ async def advantage_spell_chok(msg):
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     await msg.reply(" كنت تبحث عن مسلسل او فيلم تأكد كتابة الاسم صحيح تستطيع الذهاب الي جوجل للتأكد من الاسم الصحيح\nاستخدم التنسيق لسهولة البحث عن مسلسل S01E01\nS01 يعني الموسم الاول\nE01 يعني الحلقة الاولي\nاكتب التاريخ لسهولة البحث عن فيلم\nبامكانك ايضا اضافة الجودة و x265 او x264\nx265 يعني حجم اقل مع الحفاظ علي الجودة \nx264 نفس الجودة ولكن حجم اعلي",
-                    reply_markup=InlineKeyboardButton("🔎 𝖦𝗈𝗈𝗀𝗅𝖾", url=f"https://www.google.com/search?q={reqst_gle}")
+                    InlineKeyboardButton("🔎 𝖦𝗈𝗈𝗀𝗅𝖾", url=f"https://www.google.com/search?q={reqst_gle}")
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
