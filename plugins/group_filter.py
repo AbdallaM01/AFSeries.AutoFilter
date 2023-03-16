@@ -248,8 +248,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("● اذا كنت تبحث عن مسلسل او فيلم تأكد كتابة الاسم الصحيح تستطيع الذهاب الي جوجل للتأكد من الاسم الصحيح\n● لسهولة البحث عن <b>مسلسل<b/> استخدم  👈<b>S01E01</b>بدون فواصل واضافة 0\n<b>S01 يعني الموسم الاول\nE01 يعني الحلقة الاولي</b>\n● <b>لسهولة البحث عن فيلم اكتب التاريخ</b>\n● بامكانك ايضا كتابة الجودة و x265 او x264\nx265 يعني حجم اقل بنفس الجودة\nx264 يعني حجم اعلي بنفس الجودة")
-        await asyncio.sleep(20)
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        await asyncio.sleep(8)
         await k.delete()
         return
     temp.SPELL_CHECK[msg.id] = movielist
@@ -260,7 +260,8 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("● اذا كنت تبحث عن مسلسل او فيلم تأكد كتابة الاسم الصحيح تستطيع الذهاب الي جوجل للتأكد من الاسم الصحيح\n● لسهولة البحث عن <b>مسلسل<b/> استخدم  👈<b>S01E01</b>بدون فواصل واضافة 0\n<b>S01 يعني الموسم الاول\nE01 يعني الحلقة الاولي</b>\n● <b>لسهولة البحث عن فيلم اكتب التاريخ</b>\n● بامكانك ايضا كتابة الجودة و x265 او x264\nx265 يعني حجم اقل بنفس الجودة\nx264 يعني حجم اعلي بنفس الجودة", reply_to_message_id=msg.id)
+    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+                    reply_markup=InlineKeyboardMarkup(btn))
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
