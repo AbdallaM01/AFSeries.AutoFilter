@@ -261,8 +261,6 @@ async def advantage_spell_chok(msg):
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     await msg.reply("● <code>اذا كنت تبحث عن مسلسل او فيلم تأكد كتابة الاسم الصحيح تستطيع الذهاب الي جوجل للتأكد من الاسم الصحيح\n● لسهولة البحث عن مسلسل استخدم  👈<b>S01E01</b>بدون فواصل واضافة 0\n<b>S01 يعني الموسم الاول\nE01 يعني الحلقة الاولي</b>\n● <b>لسهولة البحث عن فيلم اكتب التاريخ</b>\n● بامكانك ايضا كتابة الجودة و x265 او x264\nx265 يعني حجم اقل بنفس الجودة\nx264 يعني حجم اعلي بنفس الجودة</code>", reply_to_message_id=msg.id)
-        await asyncio.sleep(20)
-        await k.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
