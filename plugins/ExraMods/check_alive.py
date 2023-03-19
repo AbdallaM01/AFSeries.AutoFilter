@@ -4,9 +4,9 @@ from pyrogram import Client, filters
 
 CMD = ["/", "."]
 
-@Client.on_message(filters.command("alive", CMD))
+@Client.on_message(filters.command("help", CMD))
 async def check_alive(_, message):
-    await message.reply_text("👍 انت تمام")
+    await message.reply_text("<b><a href=https://telegra.ph/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D9%88-%D8%A7%D8%B6%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%85%D8%A9-03-19>طريقة التحميل واضافة الترجمة</a></b>")
 
 
 @Client.on_message(filters.command("ping", CMD))
