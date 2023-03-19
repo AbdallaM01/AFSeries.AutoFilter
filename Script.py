@@ -17,7 +17,7 @@ class script(object):
 
 ❍ <a href=http://telegra.ph/Muxed-English-Subtitles-12-29-9><b>بــرامــج الـمــشـاهـــدة</b></a>
 
-❍ <a href=https://telegra.ph/%D8%B7%D8%B7%D8%B1%D9%8A%D8%A9-%D8%AF%D9%85%D8%AC-%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%85%D8%A9-11-22><b>اضــافـــة الـتــرجــمــة</b></a>"""
+❍ <a href=https://telegra.ph/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D9%88-%D8%A7%D8%B6%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%85%D8%A9-03-19><b>اضــافـــة الـتــرجــمــة</b></a>"""
 
     FILE_TXT = """➤ 𝐇𝐞𝐥𝐩: 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫𝐞 𝐌𝐨𝐝𝐮𝐥𝐞../
 
