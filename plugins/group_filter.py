@@ -23,9 +23,7 @@ logger.setLevel(logging.ERROR)
 
 FILTER_MODE = {}
 G_MODE = {}
-BUTTONS = {}
 SPELL_CHECK = {}
-
 
 @Client.on_message(filters.command('autofilter') & filters.group & admin_fliter)
 async def fil_mod(client, message): 
@@ -72,6 +70,7 @@ async def g_fil_mod(client, message):
       else:
           await m.edit("𝚄𝚂𝙴 :- `/g_filter on` 𝙾𝚁 `/g_filter off`")
 
+
 @Client.on_callback_query(filters.regex("next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -81,7 +80,7 @@ async def next_page(bot, query):
         offset = int(offset)
     except:
         offset = 0
-    search = BUTTONS.get(key)
+    search = temp.BUTTONS.get(key)
     if not search:
         await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
         return
@@ -134,7 +133,7 @@ async def next_page(bot, query):
             ],
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, InlineKeyboardButton("Send All" callback_data=f"{allreq}_{req}_{key}_{n_offset}")
+    btn.insert(0, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{n_offset}")])
 
     try:
         await query.edit_message_reply_markup(
@@ -143,6 +142,7 @@ async def next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
+
 
 @Client.on_callback_query(filters.regex("spolling"))
 async def advantage_spoll_choker(bot, query):
@@ -166,6 +166,7 @@ async def advantage_spoll_choker(bot, query):
             k = await query.message.edit('This Movie Not Found In DataBase')
             await asyncio.sleep(10)
             await k.delete()
+
 
 @Client.on_message(filters.group & filters.text & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.incoming & filters.group)
 async def give_filter(client, message):
@@ -240,21 +241,21 @@ async def auto_filter(client, msg, spoll=False):
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
-        BUTTONS[key] = search
+        temp.BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📄 𝐏𝐀𝐆𝐄 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"📄 𝗣𝗮𝗴𝗲 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
+             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="📄 𝐏𝐀𝐆𝐄 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, InlineKeyboardButton("Send All" callback_data=f"{allreq}_{req}_{key}_{offset}")
+    btn.insert(0, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{offset}"), InlineKeyboardButton("all", callback_data="fullfile+{req}+{key}")])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = IMDB_TEMPLATE
+    TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
             group = message.chat.title,
