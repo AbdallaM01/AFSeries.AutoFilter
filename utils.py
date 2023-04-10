@@ -44,7 +44,7 @@ class temp(object):
     SPELL_CHECK = {}
     PM_BUTTONS = {}
     PM_SPELL_CHECK = {}
-
+    ALL_FILE = {}
 
 async def is_subscribed(bot, query):
     try:
