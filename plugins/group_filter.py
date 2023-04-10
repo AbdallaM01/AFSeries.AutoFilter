@@ -254,7 +254,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, InlineKeyboardButton("Send All" callback_data=f"{allreq}_{req}_{key}_{offset}")
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = settings['template']
+    TEMPLATE = IMDB_TEMPLATE
     if imdb:
         cap = TEMPLATE.format(
             group = message.chat.title,
