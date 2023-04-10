@@ -133,6 +133,9 @@ async def next_page(bot, query):
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+    allreq = 'allfilep' if settings['file_secure'] else 'allfile'
+    btn.insert(0, InlineKeyboardButton("Send All" callback_data=f"{allreq}_{req}_{key}_{n_offset}")
+
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -140,7 +143,6 @@ async def next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
-
 
 @Client.on_callback_query(filters.regex("spolling"))
 async def advantage_spoll_choker(bot, query):
@@ -248,8 +250,11 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝐏𝐀𝐆𝐄 1/1", callback_data="pages")]
         )
+    allreq = 'allfilep' if settings['file_secure'] else 'allfile'
+    btn.insert(0, InlineKeyboardButton("Send All" callback_data=f"{allreq}_{req}_{key}_{offset}")
+
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = IMDB_TEMPLATE
+    TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
             group = message.chat.title,
