@@ -80,4 +80,6 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-
+#request force sub
+REQ_SUB = bool(environ.get("REQ_SUB", True))
+REQ_DB = environ.get("REQ_DB", DATABASE_URI)
