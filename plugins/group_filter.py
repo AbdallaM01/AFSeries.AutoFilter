@@ -111,7 +111,8 @@ async def next_page(bot, query):
     btn.insert(0,
         [
                 InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs')
+                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ')
         ]
     )
 
@@ -237,7 +238,8 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0,
         [
                 InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs')
+                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ') 
         ]
     )
 
