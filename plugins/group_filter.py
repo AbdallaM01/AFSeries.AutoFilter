@@ -141,7 +141,7 @@ async def next_page(bot, query):
             ],
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, [InlineKeyboardButton("🚀 𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 🚀", callback_data=f"{allreq}_{req}_{key}_{n_offset}"), InlineKeyboardButton(text="⚡ 𝐂𝐡𝐞𝐜𝐤 𝐏𝐌 ⚡", url='t.me/ArrowFlixBot')])
+    btn.insert(11, [InlineKeyboardButton("🚀 𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 🚀", callback_data=f"{allreq}_{req}_{key}_{n_offset}"), InlineKeyboardButton(text="⚡ 𝐂𝐡𝐞𝐜𝐤 𝐏𝐌 ⚡", url='t.me/ArrowFlixBot')])
 
     try:
         await query.edit_message_reply_markup(
@@ -256,7 +256,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, [InlineKeyboardButton("🚀 𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 🚀", callback_data=f"{allreq}_{req}_{key}_{offset}"), InlineKeyboardButton(text="⚡ 𝐂𝐡𝐞𝐜𝐤 𝐏𝐌 ⚡", url='t.me/ArrowFlixBot')])
+    btn.insert(11, [InlineKeyboardButton("🚀 𝐒𝐄𝐍𝐃 𝐀𝐋𝐋 🚀", callback_data=f"{allreq}_{req}_{key}_{offset}"), InlineKeyboardButton(text="⚡ 𝐂𝐡𝐞𝐜𝐤 𝐏𝐌 ⚡", url='t.me/ArrowFlixBot')])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = IMDB_TEMPLATE
