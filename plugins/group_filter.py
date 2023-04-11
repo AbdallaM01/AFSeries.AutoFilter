@@ -112,12 +112,7 @@ async def next_page(bot, query):
         [
                 InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
                 InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ'), 
-        ]
-    )
-    btn.insert(11,
-        [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ')
         ]
     )
 
@@ -146,7 +141,7 @@ async def next_page(bot, query):
             ],
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{n_offset}")])
+    btn.insert(11, [InlineKeyboardButton("🚀Send All🚀", callback_data=f"{allreq}_{req}_{key}_{n_offset}"), btn.insert(11, [InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')])
 
     try:
         await query.edit_message_reply_markup(
@@ -244,7 +239,7 @@ async def auto_filter(client, msg, spoll=False):
         [
                 InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
                 InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ'), 
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ')
         ]
     )
 
@@ -261,7 +256,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(11, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{offset}", btn.insert(11,[InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')])])
+    btn.insert(11, [InlineKeyboardButton("🚀Send All🚀", callback_data=f"{allreq}_{req}_{key}_{offset}", btn.insert(11,[InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
