@@ -269,7 +269,7 @@ async def auto_filter(client, msg, spoll=False):
     )
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    TEMPLATE = IMDB_TEMPLATE
+    TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
             group = message.chat.title,
