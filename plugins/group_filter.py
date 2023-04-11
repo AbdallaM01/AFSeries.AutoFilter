@@ -110,8 +110,9 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-                InlineKeyboardButton(f'sᴇʀɪᴇs', 'ɪɴꜰᴏ'),
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'sᴇʀɪᴇs')
+                InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
+                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ'), 
         ]
     )
     btn.insert(11,
@@ -241,13 +242,9 @@ async def auto_filter(client, msg, spoll=False):
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ] 
     btn.insert(0,
         [
-                InlineKeyboardButton(f'sᴇʀɪᴇs', 'ɪɴꜰᴏ'),
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'sᴇʀɪᴇs')
-        ]
-    )
-    btn.insert(11,
-        [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')
+                InlineKeyboardButton(f'sᴇʀɪᴇs', 'ᴍᴏᴠɪᴇs'),
+                InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'sᴇʀɪᴇs'),
+                InlineKeyboardButton(f'ɪɴꜰᴏ', 'ɪɴꜰᴏ'), 
         ]
     )
 
@@ -264,7 +261,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     allreq = 'allfilep' if settings['file_secure'] else 'allfile'
-    btn.insert(0, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{offset}")])
+    btn.insert(11, [InlineKeyboardButton("Send All", callback_data=f"{allreq}_{req}_{key}_{offset}", btn.insert(11,[InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')])])
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
